@@ -21,6 +21,7 @@ const config: Config = {
         "pale-dogwood": '#CCB7AE',
         "mountbatten-pink": '#8B7382',
         "chinese-violet": '#776A7A',
+        "rose-quartz": "#AC9598",
       }
     },
   },
