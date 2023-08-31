@@ -27,17 +27,17 @@ function Header({}: Props) {
         {/* Social Icons */}
         <SocialIcon
           url="https://github.com/aamnatayyab6"
-          fgColor={COLORS["timberwolf"]}
+          fgColor={COLORS["chinese-violet"]}
           bgColor="transparent"
         />
         <SocialIcon
           url="https://github.com/aamnatayyab6"
-          fgColor={COLORS["timberwolf"]}
+          fgColor={COLORS["chinese-violet"]}
           bgColor="transparent"
         />
         <SocialIcon
           url="https://github.com/aamnatayyab6"
-          fgColor={COLORS["timberwolf"]}
+          fgColor={COLORS["chinese-violet"]}
           bgColor="transparent"
         />
       </motion.div>
@@ -56,15 +56,15 @@ function Header({}: Props) {
         transition={{
           duration: 1.5,
         }}
-        className="flex flex-row items-center text-gray-300"
+        className="flex flex-row items-center text-chinese-violet"
       >
         <SocialIcon
           network="email"
-          fgColor={COLORS["timberwolf"]}
+          fgColor={COLORS["chinese-violet"]}
           bgColor="transparent"
           className="cursor-pointer"
         />
-        <p className="uppercase hidden md:inline-flex text-sm text-gray-400">
+        <p className="uppercase hidden md:inline-flex text-sm text-chinese-violet">
           Get in touch
         </p>
       </motion.div>

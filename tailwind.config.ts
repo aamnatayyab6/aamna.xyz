@@ -20,6 +20,7 @@ const config: Config = {
         "timberwolf": '#D6CFCB',
         "pale-dogwood": '#CCB7AE',
         "mountbatten-pink": '#8B7382',
+        "chinese-violet": '#776A7A',
       }
     },
   },
