@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 type Props = {};
 
@@ -9,9 +10,12 @@ function About({}: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen flex flex-col relative text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="h-screen flex flex-col relative text-center 
+      md:text-left md:flex-row max-w-7xl px-10 justify-evenly 
+      mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-2xl text-dim-gray">
+      <h3 className="absolute top-24 uppercase tracking-[20px] 
+      text-2xl text-dim-gray">
         About
       </h3>
 
@@ -32,7 +36,7 @@ function About({}: Props) {
         }}
         src="https://s3.amazonaws.com/media.thecrimson.com/photos/2018/11/12/215331_1334130.jpg"
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg
-        md:w-64 md:h-95 xl:w-[400px] xl:h-[400px]"
+        md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
 
       <div className="space-y-10 px-0 md:px-10">

@@ -5,7 +5,12 @@ type Props = {};
 
 function ExperienceCard({}: Props) {
   return (
-    <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10 bg-chinese-violet hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article
+      className="flex flex-col rounded-lg items-center space-y-7
+    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center p-10
+     bg-chinese-violet hover:opacity-100 opacity-40 cursor-pointer 
+     transition-opacity duration-200 overflow-hidden"
+    >
       <motion.img
         initial={{
           y: -100,
@@ -14,7 +19,8 @@ function ExperienceCard({}: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center"
+        className="w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] 
+        object-cover object-center"
         src="https://s3.amazonaws.com/media.thecrimson.com/photos/2018/11/12/215331_1334130.jpg"
         alt=""
       />
@@ -45,6 +51,7 @@ function ExperienceCard({}: Props) {
           />
         </div>
         <p className="uppercase py-5 text-chinese-violet">dates...</p>
+        
         <ul className="list-disc space-y-4 ml-5 text-lg">
           <li>summary points</li>
           <li>summary points</li>
