@@ -8,12 +8,13 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import ContactMe from "@/components/ContactMe";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const Home: NextPage = () => {
   return (
-    <div className="bg-dark-davys-gray h-screen text-timberwolf snap-y snap-mandatory overflow-scroll z-0">
+    <div className="bg-dark-davys-gray h-screen text-timberwolf snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-davys-gray/20 scrollbar-thumb-mountbatten-pink/20">
       <Head>
         <title>Aamna's Portfolio</title>
       </Head>
@@ -38,6 +39,7 @@ const Home: NextPage = () => {
       {/* Skills */}
       <section id="skills" className="snap-start">
         <Skills />
+        {/* bugs-> all skills dont show on md screen  */}
       </section>
 
       {/* Projects -> Thesis also  */}
@@ -46,6 +48,9 @@ const Home: NextPage = () => {
       </section>
 
       {/* Contact Me */}
+      <section id="contact" className="snap-start">
+        <ContactMe />
+      </section>
     </div>
   );
 };
