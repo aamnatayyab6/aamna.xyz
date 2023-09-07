@@ -18,7 +18,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Aamna's Portfolio</title>
       </Head>
-
+    
       <Header />
 
       {/* Hero  */}
@@ -51,6 +51,8 @@ const Home: NextPage = () => {
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
+
+      {/* Footer */}
     </div>
   );
 };
