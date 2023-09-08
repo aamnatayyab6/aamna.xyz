@@ -2,6 +2,8 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import { NextPage } from "next";
+import Link from "next/link";
+import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -18,7 +20,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Aamna's Portfolio</title>
       </Head>
-    
+
       <Header />
 
       {/* Hero  */}
@@ -53,6 +55,15 @@ const Home: NextPage = () => {
       </section>
 
       {/* Footer */}
+      <Link href="#hero">
+        <footer className="sticky bottom-5 w-full cursor-pointer">
+          <div className="flex items-center justify-center">
+            <div className="rounded-full flex items-center justify-center">
+              <ArrowUpCircleIcon className="h-7 w-17 pb-0.5 filter  rounded-full grayscale hover:grayscale-0 cursor-pointer text-green-200" />
+            </div>
+          </div>
+        </footer>
+      </Link>
     </div>
   );
 };
