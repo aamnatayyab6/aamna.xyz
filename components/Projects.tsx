@@ -19,7 +19,7 @@ function Projects({}: Props) {
 
       <div className="relative w-full flex overflow-y-hidden overflow-x-scroll snap-x snap-mandatory z-20 scrollbar-thin scrollbar-track-davys-gray/20 scrollbar-thumb-mountbatten-pink/20">
         {projects.map((project, i) => (
-          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
+          <div key={i} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
             <motion.img
               initial={{ y: -300, opacity: 0 }}
               transition={{ duration: 1.2 }}
@@ -48,7 +48,7 @@ function Projects({}: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[30%] bg-mountbatten-pink/10 left-0 h-[500px] -skew-y-12" />
+      {/* <div className="w-full absolute top-[30%] bg-mountbatten-pink/10 left-0 h-[500px] -skew-y-12" /> */}
     </motion.div>
   );
 }

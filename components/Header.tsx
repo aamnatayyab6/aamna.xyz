@@ -45,7 +45,8 @@ function Header({}: Props) {
           bgColor="transparent"
         />
       </motion.div>
-      <Link href="#contact">
+
+      <Link href="#contact" legacyBehavior>
         <motion.div
           initial={{
             x: 500,
@@ -68,6 +69,7 @@ function Header({}: Props) {
             bgColor="transparent"
             className="cursor-pointer"
           />
+
           <p className="uppercase hidden md:inline-flex text-sm text-chinese-violet">
             Get in touch
           </p>
