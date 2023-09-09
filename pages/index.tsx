@@ -35,21 +35,21 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <title>Aamna's Portfolio</title>
       </Head>
 
-      <Header />
+      <Header socials={socials} />
 
       {/* Hero  */}
       <section id="hero" className="snap-start">
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       {/* About */}
       <section id="about" className="snap-center">
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
       {/* Experience */}
       <section id="experience" className="snap-center">
-        <WorkExperience />
+        <WorkExperience experiences={experiences} /> {/* TODO: edit the scrollbar in experience cards */}
       </section>
 
       {/* Skills */}

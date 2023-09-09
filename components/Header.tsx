@@ -3,10 +3,13 @@ import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import COLORS from "../styles/colors";
 import Link from "next/link";
+import { Social } from "@/typings";
 
-type Props = {};
+type Props = {
+  socials: Social[];
+};
 
-function Header({}: Props) {
+function Header({ socials }: Props) {
   return (
     <header
       className="sticky top-0 p-5 flex items-start justify-between 
@@ -29,21 +32,14 @@ function Header({}: Props) {
         className="flex flex-row items-center"
       >
         {/* Social Icons */}
-        <SocialIcon
-          url="https://github.com/aamnatayyab6"
-          fgColor={COLORS["chinese-violet"]}
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://github.com/aamnatayyab6"
-          fgColor={COLORS["chinese-violet"]}
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://github.com/aamnatayyab6"
-          fgColor={COLORS["chinese-violet"]}
-          bgColor="transparent"
-        />
+        {socials.map((socials) => (
+          <SocialIcon
+            key={socials._id}
+            url={socials.url}
+            fgColor={COLORS["chinese-violet"]}
+            bgColor="transparent"
+          />
+        ))}
       </motion.div>
 
       <Link href="#contact" legacyBehavior>
