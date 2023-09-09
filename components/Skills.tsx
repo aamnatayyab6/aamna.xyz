@@ -1,10 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Skill from "./Skill";
+import TechSkill from "./TechSkill";
+import { Skill } from "@/typings";
 
-type Props = {};
+type Props = {
+  skills: Skill[];
+};
 
-function Skills({}: Props) {
+function Skills({ skills }: Props) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -12,30 +15,18 @@ function Skills({}: Props) {
       transition={{ duration: 1.5 }}
       className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-dim-gray text-2xl">
+      <h3 className="absolute top-14 uppercase tracking-[20px] text-dim-gray text-2xl">
         Skills
       </h3>
 
-      <h3 className="absolute top-36 uppercase tracking-[3px] text-dim-gray text-sm">
+      <h3 className="absolute top-24 uppercase tracking-[3px] text-dim-gray">
         Hover over a skill for current proficiency
       </h3>
 
       <div className="grid grid-cols-4 gap-5">
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
-        <Skill />
+        {skills.map((techskill) => (
+          <TechSkill key={techskill._id} techskill={techskill} />
+        ))}
       </div>
     </motion.div>
   );

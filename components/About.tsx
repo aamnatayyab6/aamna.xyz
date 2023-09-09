@@ -19,7 +19,7 @@ function About({ pageInfo }: Props) {
       mx-auto items-center"
     >
       <h3
-        className="absolute top-24 uppercase tracking-[20px] 
+        className="absolute top-14 uppercase tracking-[20px] 
       text-2xl text-dim-gray"
       >
         About

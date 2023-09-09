@@ -11,9 +11,12 @@ function ExperienceCard({ experience }: Props) {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7
-    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[600px] xl:h-[400px] snap-center p-10
+    flex-shrink-0 w-[500px] md:w-[600px] xl:w-[580px] xl:h-[450px] mt-24 xl:mt-10 snap-center p-10
      bg-chinese-violet hover:opacity-100 opacity-40 cursor-pointer 
-     transition-opacity duration-200 overflow-hidden"
+     transition-opacity duration-200 overflow-y-scroll scrollbar-thin scrollbar-track-davys-gray/40 scrollbar-thumb-mountbatten-pink/80"
+    // className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
+    // bg-chinese-violet mt-10 w-1/2 sm:h-[400px] sm:w-[600px] md:w-[600px] xl:w-[580px] xl:h-[450px] snap-center p-10 hover:opacity-100 opacity-40 cursor-pointer 
+    // transition-opacity duration-200 overflow-hidden"
     >
       <motion.img
         initial={{
@@ -50,7 +53,8 @@ function ExperienceCard({ experience }: Props) {
         </p>
 
         {/* TODO: edit the scrollbar */}
-        <ul className="list-disc space-y-4 ml-5 mr-4 text-lg overflow-y-scroll scrollbar-thin scrollbar-track-dark-davys-gray scrollbar-thumb-timberwolf">
+        <ul className="list-disc space-y-4 ml-5 mr-2 ">
+          {/* overflow-y-scroll scrollbar-thin scrollbar-track-davys-gray/20 scrollbar-thumb-mountbatten-pink/30 */}
           {experience?.points?.map((point, i) => (
             <li key={i}>{point}</li>
           ))}
