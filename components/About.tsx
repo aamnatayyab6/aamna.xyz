@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { PageInfo } from "@/typings";
 import { urlFor } from "@/sanity";
 
@@ -41,17 +40,17 @@ function About({ pageInfo }: Props) {
           once: true,
         }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-48 h-48 mt-10 md:mt-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-80 xl:h-80"
+        className="-mb-2 md:mb-0 flex-shrink-0 w-28 h-28 mt-20 md:mt-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-80 xl:h-80"
       />
       <div className="space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+        <h4 className="text-3xl md:text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-mountbatten-pink/50">
             little
           </span>{" "}
           background
         </h4>
-        <p className="text-sm">{pageInfo?.backgroundInformation}</p>
+        <p className="text-sm md:text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );

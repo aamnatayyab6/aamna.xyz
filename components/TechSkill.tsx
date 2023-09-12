@@ -17,7 +17,12 @@ function TechSkill({ directionLeft, techskill }: Props) {
       />
       <div className="absolute opacity-0 group-hover:opacity-70 transition duration-300 ease-in-out group-hover:bg-timberwolf h-24 w-24 rounded-full z-0">
         <div className="flex items-center justify-center h-full">
-          <p className="text-3xl font-bold text-black opacity-100">{techskill?.progress}% </p>
+          <p className="text-3xl font-bold text-black opacity-100">
+            {techskill?.progress}%{" "}
+          </p>
+        </div>
+        <div className="flex justify-center text-black font-bold">
+          <p>{techskill?.title}</p>
         </div>
       </div>
     </div>
