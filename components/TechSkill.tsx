@@ -15,7 +15,7 @@ function TechSkill({ directionLeft, techskill }: Props) {
         src={urlFor(techskill?.image).url()}
         className="rounded-full border border-davys-gray object-cover w-24 h-24 filter group-hover:grayscale transition duration-300 ease-in-out bg-davys-gray"
       />
-      <div className="absolute opacity-0 group-hover:opacity-70 transition duration-300 ease-in-out group-hover:bg-timberwolf h-24 w-24 rounded-full z-0">
+      <div className="absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-timberwolf h-24 w-24 rounded-full z-0">
         <div className="flex items-center justify-center h-full">
           <p className="text-3xl font-bold text-black opacity-100">
             {techskill?.progress}%{" "}
