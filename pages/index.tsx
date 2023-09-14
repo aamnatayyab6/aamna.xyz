@@ -17,6 +17,7 @@ import { fetchExperiences } from "@/utils/fetchExperiences";
 import { fetchProjects } from "@/utils/fetchProjects";
 import { fetchSkills } from "@/utils/fetchSkills";
 import { fetchSocials } from "@/utils/fetchSocials";
+import COLORS from "@/styles/colors";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,7 +31,7 @@ type Props = {
 
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
-    <div className="bg-dark-davys-gray h-screen text-timberwolf snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-davys-gray/20 scrollbar-thumb-mountbatten-pink/20">
+    <div className="bg-dark-davys-gray h-screen text-timberwolf snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar-thin scrollbar-track-davys-gray/20 scrollbar-thumb-timberwolf/20">
       <Head>
         <title>Aamna's Portfolio</title>
       </Head>
@@ -49,7 +50,8 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       {/* Experience */}
       <section id="experience" className="snap-center">
-        <WorkExperience experiences={experiences} /> {/* TODO: edit the scrollbar in experience cards */}
+        <WorkExperience experiences={experiences} />{" "}
+        {/* TODO: edit the scrollbar in experience cards */}
       </section>
 
       {/* Skills */}
@@ -60,7 +62,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       {/* Projects -> Thesis also  */}
       <section id="projects" className="snap-start">
-        <Projects />
+        <Projects projects={projects} />
       </section>
 
       {/* Contact Me */}
@@ -73,7 +75,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <footer className="sticky bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
             <div className="rounded-full flex items-center justify-center">
-              <ArrowUpCircleIcon className="h-7 w-17 pb-0.5 filter  rounded-full grayscale hover:grayscale-0 cursor-pointer text-green-200" />
+              <ArrowUpCircleIcon className="h-7 w-17 pb-0.5 filter rounded-full bg-davys-gray grayscale hover:grayscale-0 cursor-pointer text-green-200" />
             </div>
           </div>
         </footer>
@@ -99,6 +101,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       socials,
     },
+    // ISR: 10sec
     revalidate: 10,
   };
 };

@@ -12,11 +12,8 @@ function ExperienceCard({ experience }: Props) {
     <article
       className="flex flex-col rounded-lg items-center space-y-7
     flex-shrink-0 w-[500px] md:w-[600px] xl:w-[580px] xl:h-[450px] mt-24 xl:mt-10 snap-center p-10
-     bg-chinese-violet hover:opacity-100 opacity-40 cursor-pointer 
+     bg-gunmetal hover:opacity-100 opacity-40 cursor-pointer 
      transition-opacity duration-200 overflow-y-scroll scrollbar-thin scrollbar-track-davys-gray/40 scrollbar-thumb-mountbatten-pink/80"
-    // className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-    // bg-chinese-violet mt-10 w-1/2 sm:h-[400px] sm:w-[600px] md:w-[600px] xl:w-[580px] xl:h-[450px] snap-center p-10 hover:opacity-100 opacity-40 cursor-pointer 
-    // transition-opacity duration-200 overflow-hidden"
     >
       <motion.img
         initial={{
@@ -32,8 +29,13 @@ function ExperienceCard({ experience }: Props) {
         alt=""
       />
       <div className="px-0 md:px-10 ">
-        <h4 className="text-3xl font-light ">{experience?.company}</h4>
-        <p className="font-semibold text-2xl mt-1 "> {experience?.jobTitle}</p>
+        <h4 className="text-2xl font-light text-timberwolf">
+          {experience?.company}
+        </h4>
+        <p className="font-[Helvetica] text-xl mt-1 text-basic">
+          {" "}
+          {experience?.jobTitle}
+        </p>
         <div className="flex space-x-2 my-2">
           {/* Texh stack */}
           {experience?.technologies?.map((technology) => (
@@ -41,20 +43,18 @@ function ExperienceCard({ experience }: Props) {
               key={technology._id}
               src={urlFor(technology.image).url()}
               alt="oops!"
-              className="h-8 w-8 rounded-full"
+              className="h-8 w-8 rounded-full bg-dim-gray"
             />
           ))}
         </div>
-        <p className="uppercase py-5 text-timberwolf">
+        <p className="uppercase py-5 text-taupegray font-[Helvetica]">
           {new Date(experience?.dateStarted).toDateString()} -{" "}
           {experience?.isCurrentlyWorkingHere
             ? "Present"
             : new Date(experience?.dateEnded).toDateString()}
         </p>
 
-        {/* TODO: edit the scrollbar */}
-        <ul className="list-disc space-y-4 ml-5 mr-2 ">
-          {/* overflow-y-scroll scrollbar-thin scrollbar-track-davys-gray/20 scrollbar-thumb-mountbatten-pink/30 */}
+        <ul className="list-disc space-y-4 ml-5 mr-2 text-timberwolf font-[Helvetica]">
           {experience?.points?.map((point, i) => (
             <li key={i}>{point}</li>
           ))}

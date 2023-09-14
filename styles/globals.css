@@ -5,11 +5,11 @@
  
 @layer components {
   .heroButton {
-    @apply px-6 py-2 border border-dark-davys-gray rounded-full uppercase text-xs tracking-widest text-chinese-violet transition-all hover:border-pale-dogwood/40 hover:text-pale-dogwood/40
+    @apply px-6 py-2 border border-dark-davys-gray rounded-full uppercase text-sm tracking-widest text-heading transition-all hover:border-pale-dogwood/40 hover:text-pale-dogwood/40
   }
 
   .contactInput {
-    @apply outline-none bg-dim-gray/10 rounded-sm border-b px-6 py-4 border-dark-davys-gray text-dim-gray placeholder-gray-500 transition-all focus:border-mountbatten-pink/40 focus:text-timberwolf/40 hover:border-mountbatten-pink/40
+    @apply outline-none bg-dim-gray/10 rounded-sm border-b px-6 py-4 border-dark-davys-gray text-heading placeholder-gray-500 transition-all focus:border-mountbatten-pink/40 focus:text-timberwolf/40 hover:border-mountbatten-pink/40
   }
 }
 /* :root {

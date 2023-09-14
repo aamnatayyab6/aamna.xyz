@@ -14,37 +14,37 @@ type Props = {};
 const ContactMe = (props: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:aamnatayyab6@gmail?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+    window.location.href = `mailto:aamnatayyab6@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}.`;
   };
 
   return (
     <div className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-dim-gray text-2xl">
+      <h3 className="absolute top-14 uppercase tracking-[20px] text-heading text-2xl">
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-4">
+        <h4 className="text-2xl font-semibold text-timberwolf text-center mt-4">
           I have got just what you need.{" "}
           <span className="decoration-pale-dogwood/50 underline">
             Lets Talk.
           </span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-7">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-pale-dogwood h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+36204493679</p>
+            <PhoneIcon className="text-pale-dogwood h-5 w-5 animate-pulse" />
+            <p className="text-lg text-timberwolf">+36204493679</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-pale-dogwood h-7 w-7 animate-pulse" />
-            <p className="text-2xl">aamnatayyab6@gmail.com</p>
+            <EnvelopeIcon className="text-pale-dogwood h-5 w-5 animate-pulse" />
+            <p className="text-lg text-timberwolf">aamnatayyab6@gmail.com</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-pale-dogwood h-7 w-7 animate-pulse" />
-            <p className="text-2xl">Budapest VIII. Kerulet</p>
+            <MapPinIcon className="text-pale-dogwood h-5 w-5 animate-pulse" />
+            <p className="text-lg text-timberwolf">Budapest VIII. Kerulet</p>
           </div>
         </div>
 
@@ -71,8 +71,6 @@ const ContactMe = (props: Props) => {
             placeholder="Subject"
             className="contactInput"
             type="text"
-            name=""
-            id=""
           />
 
           <textarea

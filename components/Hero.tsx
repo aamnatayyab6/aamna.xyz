@@ -29,12 +29,12 @@ const Hero = ({ pageInfo }: Props) => {
         alt="oops!"
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-chinese-violet pb-2 tracking-[15px]">
+        <h2 className="text-base uppercase text-heading pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h1 className="text-4xl lg:text-5xl text-timberwolf font-semibold px-10">
           <span className="mr-3">{text}</span>
-          <Cursor cursorColor={COLORS["pale-dogwood"]} />
+          <Cursor cursorColor={COLORS["heading"]} />
         </h1>
 
         <div className="pt-5">

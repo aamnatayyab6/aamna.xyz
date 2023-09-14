@@ -36,8 +36,9 @@ function Header({ socials }: Props) {
           <SocialIcon
             key={socials._id}
             url={socials.url}
-            fgColor={COLORS["chinese-violet"]}
+            fgColor={COLORS["heading"]}
             bgColor="transparent"
+            className="hover:green-400"
           />
         ))}
       </motion.div>
@@ -57,16 +58,16 @@ function Header({ socials }: Props) {
           transition={{
             duration: 1.5,
           }}
-          className="flex flex-row items-center text-chinese-violet"
+          className="flex flex-row items-center text-heading"
         >
           <SocialIcon
             network="email"
-            fgColor={COLORS["chinese-violet"]}
+            fgColor={COLORS["heading"]}
             bgColor="transparent"
             className="cursor-pointer"
           />
 
-          <p className="uppercase hidden md:inline-flex text-sm text-chinese-violet">
+          <p className="uppercase hidden md:inline-flex text-sm text-heading">
             Get in touch
           </p>
         </motion.div>

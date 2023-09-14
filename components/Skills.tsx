@@ -15,17 +15,21 @@ function Skills({ skills }: Props) {
       transition={{ duration: 1.5 }}
       className="flex relative flex-col text-center md:text-left xl:flex-row max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center"
     >
-      <h3 className="absolute top-14 uppercase tracking-[20px] text-dim-gray text-2xl">
+      <h3 className="absolute top-14 uppercase tracking-[20px] text-heading text-2xl">
         Skills
       </h3>
 
-      <h3 className="absolute top-24 uppercase tracking-[3px] text-dim-gray">
+      <h3 className="absolute top-24 uppercase tracking-[3px] text-taupegray">
         Hover over a skill for current proficiency
       </h3>
 
-      <div className="grid grid-cols-4 gap-7 pt-10">
-        {skills.map((techskill) => (
+      <div className="grid grid-cols-5 gap-7 pt-10">
+        {skills?.slice(0, skills.length / 2).map((techskill) => (
           <TechSkill key={techskill._id} techskill={techskill} />
+        ))}
+
+        {skills?.slice(skills.length / 2, skills.length).map((techskill) => (
+          <TechSkill key={techskill._id} techskill={techskill} directionLeft />
         ))}
       </div>
     </motion.div>

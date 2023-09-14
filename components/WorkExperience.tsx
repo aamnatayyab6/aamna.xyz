@@ -17,21 +17,15 @@ function WorkExperience({ experiences }: Props) {
     >
       <h3
         className="absolute top-14 uppercase tracking-[20px] 
-      text-2xl text-dim-gray"
+      text-2xl text-heading"
       >
         Experience
       </h3>
 
-      {/* check if this is made same place */}
       <div
         className="w-full flex space-x-5 overflow-x-scroll p-10 
-      snap-x snap-mandatory scrollbar-thin scrollbar-track-davys-gray/20 scrollbar-thumb-mountbatten-pink/30"
+      snap-x snap-mandatory scrollbar-thin scrollbar-track-davys-gray/20 scrollbar-thumb-timberwolf/20"
       >
-        {/* make the cards scrollable */}
-        {/* Exxon */}
-        {/* GDSC */}
-        {/* GDG */}
-        {/* Budapest Blend */}
         {experiences.map((experience) => (
           <ExperienceCard key={experience._id} experience={experience} />
         ))}
