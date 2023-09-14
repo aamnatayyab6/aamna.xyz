@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Project } from "@/typings";
 import { urlFor } from "@/sanity";
 import Link from "next/link";
-import Image from "next/image";
 
 type Props = {
   projects: Project[];
@@ -50,7 +49,7 @@ function Projects({ projects }: Props) {
               <div className="flex items-center justify-center space-x-2">
                 {/* Texh stack */}
                 {project?.technologies?.map((technology) => (
-                  <Image
+                  <img
                     key={technology._id}
                     src={urlFor(technology.image).url()}
                     alt="oops!"
