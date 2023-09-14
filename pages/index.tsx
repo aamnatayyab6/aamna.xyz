@@ -67,7 +67,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
       {/* Contact Me */}
       <section id="contact" className="snap-start">
-        <ContactMe />
+        <ContactMe pageInfo={pageInfo} />
       </section>
 
       {/* Footer */}
@@ -101,7 +101,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       skills,
       socials,
     },
-    // ISR: 10sec
-    revalidate: 1000,
+    // ISR: 10ec
+    revalidate: 10,
   };
 };

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Experience } from "@/typings";
 import { urlFor } from "@/sanity";
+import Image from "next/image";
 
 type Props = {
   experience: Experience;
@@ -39,7 +40,7 @@ function ExperienceCard({ experience }: Props) {
         <div className="flex space-x-2 my-2">
           {/* Texh stack */}
           {experience?.technologies?.map((technology) => (
-            <img
+            <Image
               key={technology._id}
               src={urlFor(technology.image).url()}
               alt="oops!"

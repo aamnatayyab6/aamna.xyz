@@ -51,9 +51,9 @@ function About({ pageInfo }: Props) {
           background
         </h4>
         <p className="text-sm md:text-base text-timberwolf">
-          Hello there! I'm Aamna, a dynamic tech enthusiast hailing from
+          Hello there! I&apos;m Aamna, a dynamic tech enthusiast hailing from
           Pakistan. Armed with a degree in Computer Science earned on a
-          scholarship journey in Hungary, I've evolved into a passionate coder,
+          scholarship journey in Hungary, I&apos;ve evolved into a passionate coder,
           a devoted advocate for cross-cultural tech collaboration, and an
           aficionado of all things vintage and cinematic.
           <br />
@@ -63,13 +63,13 @@ function About({ pageInfo }: Props) {
               Eötvös Loránd University (ELTE)
             </a>
           </u>
-          , I've made it my mission to bridge the digital divide and transcend
+          , I&apos;ve made it my mission to bridge the digital divide and transcend
           borders through code. With more than a year of experience as an IT
           Intern at{" "}
           <u className="text-taupegray">
             <a href="https://corporate.exxonmobil.com/">ExxonMobil</a>
           </u>
-          , I've honed my skills in full-stack web development and beyond.
+          , I&apos;ve honed my skills in full-stack web development and beyond.
           During my tenure, I learned the art of full-stack web development,
           automation and configuration management.
           <br />
@@ -84,7 +84,7 @@ function About({ pageInfo }: Props) {
           of 9 to 100 members. As the lead, I hosted engaging tech events and
           facilitated productive weekly meetings. <br />
           <br />
-          Currently, I'm actively contributing to the tech community as a
+          Currently, I&apos;m actively contributing to the tech community as a
           co-organizer at{" "}
           <u className="text-taupegray">
             <a href="https://gdg.community.dev/gdg-budapest/">
@@ -94,7 +94,7 @@ function About({ pageInfo }: Props) {
           , uniting tech minds in innovative ways.
           <br />
           <br />
-          I'm on the lookout for exciting opportunities in application
+          I&apos;m on the lookout for exciting opportunities in application
           development, where I can leverage my experience to create innovative
           digital solutions that push boundaries and transform industries.
         </p>
