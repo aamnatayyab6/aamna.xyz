@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import { GetStaticProps, NextPage } from "next";
+import { GetServerSideProps, GetStaticProps, NextPage } from "next";
 import Link from "next/link";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
 import Header from "@/components/Header";
