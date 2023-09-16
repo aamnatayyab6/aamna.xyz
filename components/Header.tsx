@@ -32,10 +32,10 @@ function Header({ socials }: Props) {
         className="flex flex-row items-center"
       >
         {/* Social Icons */}
-        {socials.map((socials) => (
+        {socials.map((social) => (
           <SocialIcon
-            key={socials._id}
-            url={socials.url}
+            key={social?._id}
+            url={social?.url}
             fgColor={COLORS["heading"]}
             bgColor="transparent"
             className="hover:green-400"

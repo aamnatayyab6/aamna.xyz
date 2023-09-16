@@ -7,15 +7,15 @@ type Inputs = {
   name: string;
   email: string;
   subject: string;
-  message: string;
+  body: string;
 };
 
-type Props = {pageInfo:PageInfo};
+type Props = { pageInfo: PageInfo };
 
-const ContactMe = ({pageInfo}: Props) => {
+const ContactMe = ({ pageInfo }: Props) => {
   const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:aamnatayyab6@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}.`;
+    window.location.href = `mailto:aamnatayyab6@gmail.com?subject=${formData.subject} &body=Hi, my name is ${formData.name}. ${formData.body}.`;
   };
 
   return (
@@ -75,7 +75,7 @@ const ContactMe = ({pageInfo}: Props) => {
           />
 
           <textarea
-            {...register("message")}
+            {...register("body")}
             placeholder="Message"
             className="contactInput"
           />
