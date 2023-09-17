@@ -8,7 +8,7 @@ export const fetchPageInfo = async () => {
   const data = await res.json();
   const pageInfo: PageInfo = data.pageInfo;
 
-  // console.log('fetching', pageinfo);
+  // console.log('fetchingggggggg', pageInfo);
 
   return pageInfo;
 };

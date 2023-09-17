@@ -40,10 +40,10 @@ function About({ pageInfo }: Props) {
           once: true,
         }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="-mb-2 md:mb-0 flex-shrink-0 w-28 h-28 mt-20 md:mt-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-80 xl:h-80"
+        className="-mb-2 md:mb-0 flex-shrink-0 w-10 h-10 mt-20 md:mt-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-80 xl:h-80"
       />
       <div className="space-y-10 px-0 md:px-10 ">
-        <h4 className="text-3xl md:text-4xl font-semibold text-basic">
+        <h4 className="text-lg md:text-4xl font-semibold text-basic">
           Here is a{" "}
           <span className="underline decoration-mountbatten-pink/50">
             little

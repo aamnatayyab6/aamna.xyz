@@ -12,12 +12,7 @@ import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
 import { Experience, PageInfo, Project, Skill, Social } from "@/typings";
-import { fetchPageInfo } from "@/utils/fetchPageInfo";
-import { fetchExperiences } from "@/utils/fetchExperiences";
-import { fetchProjects } from "@/utils/fetchProjects";
-import { fetchSkills } from "@/utils/fetchSkills";
-import { fetchSocials } from "@/utils/fetchSocials";
-import COLORS from "@/styles/colors";
+import { sanityClient } from "@/sanity";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -86,12 +81,22 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
 export default Home;
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperiences();
-  const projects: Project[] = await fetchProjects();
-  const skills: Skill[] = await fetchSkills();
-  const socials: Social[] = await fetchSocials();
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+  const pageInfo: PageInfo = await sanityClient.fetch(
+    `*[_type == 'pageInfo'][0]`
+  );
+  const experiences: Experience[] = await sanityClient.fetch(
+    `*[_type == 'experience'] {
+      ...,
+      technologies[]->
+    }`
+  );
+  const projects: Project[] = await sanityClient.fetch(`*[_type == 'project'] {
+    ...,
+    technologies[]->
+  }`);
+  const skills: Skill[] = await sanityClient.fetch(`*[_type == 'skill']`);
+  const socials: Social[] = await sanityClient.fetch(`*[_type == 'social']`);
 
   return {
     props: {
@@ -102,6 +107,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       socials,
     },
     // ISR: 10ec
-    revalidate: 10,
+    // revalidate: 10,
   };
 };
