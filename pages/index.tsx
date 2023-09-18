@@ -80,7 +80,7 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps<Props> = async () => {
+export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await sanityClient.fetch(
     `*[_type == 'pageInfo'][0]`
   );
@@ -106,6 +106,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
       socials,
     },
     // ISR: 10ec
-    // revalidate: 10,
+    revalidate: 10,
   };
 };
