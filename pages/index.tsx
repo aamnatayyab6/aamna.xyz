@@ -46,7 +46,6 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       {/* Experience */}
       <section id="experience" className="snap-center">
         <WorkExperience experiences={experiences} />{" "}
-        {/* TODO: edit the scrollbar in experience cards */}
       </section>
 
       {/* Skills */}
@@ -66,15 +65,15 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
       </section>
 
       {/* Footer */}
-      <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
-          <div className="flex items-center justify-center">
-            <div className="rounded-full flex items-center justify-center">
+      <footer className="sticky bottom-5 w-full cursor-pointer">
+        <div className="flex items-center justify-center">
+          <div className="rounded-full flex items-center justify-center">
+            <Link href="#hero">
               <ArrowUpCircleIcon className="h-7 w-17 pb-0.5 filter rounded-full bg-davys-gray grayscale hover:grayscale-0 cursor-pointer text-green-200" />
-            </div>
+            </Link>
           </div>
-        </footer>
-      </Link>
+        </div>
+      </footer>
     </div>
   );
 };

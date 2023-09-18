@@ -34,12 +34,12 @@ function Projects({ projects }: Props) {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt=""
-              className="h-64 w-66"
+              className="h-44 w-46 md:h-64 md:w-66"
             />
 
             <div className="space-y-5 px-0 md:px-10 max-w-4xl">
               <Link href={project?.linkToBuild}>
-                <h4 className="text-3xl font-semibold text-center text-timberwolf hover:text-rose-quartz">
+                <h4 className="text-lg md:text-3xl font-semibold text-center text-timberwolf hover:text-rose-quartz">
                   <span className="underline decoration-pale-dogwood/50">
                     {/* Case study {i + 1} of {projects.length}:{" "} */}
                     {project.title}

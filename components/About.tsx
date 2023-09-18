@@ -13,9 +13,9 @@ function About({ pageInfo }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative h-screen text-center 
-      md:text-left md:flex-row max-w-7xl px-10 justify-evenly 
-      mx-auto items-center"
+      className="flex flex-col relative  h-screen text-center 
+      md:text-left md:flex-row max-w-7xl px-10 justify-evenly
+      mx-auto items-center "
     >
       <h3
         className="absolute top-14 uppercase tracking-[20px] 
@@ -40,22 +40,15 @@ function About({ pageInfo }: Props) {
           once: true,
         }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="-mb-2 md:mb-0 flex-shrink-0 w-10 h-10 mt-20 md:mt-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-80 xl:h-80"
+        className=" md:mb-0 flex-shrink-0 w-16 h-16 -mt-10 md:mt-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-80 xl:h-80"
       />
-      <div className="space-y-10 px-0 md:px-10 ">
-        <h4 className="text-lg md:text-4xl font-semibold text-basic">
-          Here is a{" "}
-          <span className="underline decoration-mountbatten-pink/50">
-            little
-          </span>{" "}
-          background
-        </h4>
-        <p className="text-sm md:text-base text-timberwolf">
+      <div className="space-y-5 px-0 md:px-10 -mt-32 md:mt-10">
+        <p className="text-xs md:text-base text-timberwolf">
           Hello there! I&apos;m Aamna, a dynamic tech enthusiast hailing from
           Pakistan. Armed with a degree in Computer Science earned on a
-          scholarship journey in Hungary, I&apos;ve evolved into a passionate coder,
-          a devoted advocate for cross-cultural tech collaboration, and an
-          aficionado of all things vintage and cinematic.
+          scholarship journey in Hungary, I&apos;ve evolved into a passionate
+          coder, a devoted advocate for cross-cultural tech collaboration, and
+          an aficionado of all things vintage and cinematic.
           <br />
           <br /> As a BSc. Computer Science graduate from{" "}
           <u className="text-taupegray">
@@ -63,9 +56,9 @@ function About({ pageInfo }: Props) {
               Eötvös Loránd University (ELTE)
             </a>
           </u>
-          , I&apos;ve made it my mission to bridge the digital divide and transcend
-          borders through code. With more than a year of experience as an IT
-          Intern at{" "}
+          , I&apos;ve made it my mission to bridge the digital divide and
+          transcend borders through code. With more than a year of experience as
+          an IT Intern at{" "}
           <u className="text-taupegray">
             <a href="https://corporate.exxonmobil.com/">ExxonMobil</a>
           </u>

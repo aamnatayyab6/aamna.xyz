@@ -23,7 +23,7 @@ function Skills({ skills }: Props) {
         Hover over a skill for current proficiency
       </h3>
 
-      <div className="grid grid-cols-5 gap-7 pt-10">
+      <div className="grid grid-cols-4 md:grid-cols-5 gap-7 ">
         {skills?.slice(0, skills.length / 2).map((techskill) => (
           <TechSkill key={techskill._id} techskill={techskill} />
         ))}

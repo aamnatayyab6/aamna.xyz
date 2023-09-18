@@ -25,8 +25,8 @@ const ContactMe = ({ pageInfo }: Props) => {
       </h3>
 
       <div className="flex flex-col space-y-4">
-        <h4 className="text-2xl font-semibold text-timberwolf text-center mt-4">
-          I have got just what you need.{" "}
+        <h4 className="text-2xl font-semibold text-timberwolf text-center -mt-20 md:mt-0">
+          Get In Touch.{" "}
           <span className="decoration-pale-dogwood/50 underline">
             Lets Talk.
           </span>
@@ -51,19 +51,19 @@ const ContactMe = ({ pageInfo }: Props) => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 w-80 md:w-fit mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="md:flex md:space-x-2 space-y-2 md:space-y-0 ">
             <input
               {...register("name")}
               placeholder="Name"
-              className="contactInput"
+              className="contactInput w-80 md:w-auto"
               type="text"
             />
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput"
+              className="contactInput w-80 md:w-auto"
               type="email"
             />
           </div>
