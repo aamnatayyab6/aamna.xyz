@@ -31,6 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Connect Sanity
+        env: 
+          SANITY_STUDIO_API_PROJECT_ID: 0gtt2jlz
+        run: npx sanity start
       - name: Detect package manager
         id: detect-package-manager
         run: |
