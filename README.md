@@ -1,3 +1,26 @@
+<div align="center">
+  <img alt="Logo" src="https://github.com/aamnatayyab6/portfolio/blob/main/public/favicon-32x32.png" width="100" />
+</div>
+<h1 align="center">
+  Aamna Tayyab
+</h1>
+
+<p align="center">
+  Personal portfolio website, built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted on <a href="https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme">Vercel</a>.
+</p>
+</p>
+
+<p align="center">
+    <img src="https://therealsujitk-vercel-badge.vercel.app/?app=aamnatayyab" alt="status"/>
+</p>
+
+![demo](./public/landing_page.png)
+
+### Want to see it in action? You can find the website [here](https://aamnatayyab.vercel.app)!
+<br/>
+
+# Next JS
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -31,8 +54,25 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+# Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+# Sanity
+
+To just run sanity:
+
+```
+cd sanity
+sanity start
+```
+
+To deploy sanity:
+
+```
+sanity deploy
+```
+
+#### Originally inspired by [Sonny Sangha](https://www.papareact.com/).
