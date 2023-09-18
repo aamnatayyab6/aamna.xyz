@@ -24,10 +24,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  SANITY_PROJECT_ID: 0gtt2jlz
-          
-
 jobs:
   # Build job
   build:
@@ -77,6 +73,11 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Test and Build
+        working-directory: sanity
+        run: npm t
+        env:
+          SANITY_STUDIO_PROJECT: ${{ secrets.SANITY_PROJECT_ID }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
