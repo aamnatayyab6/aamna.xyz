@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/aamnatayyab6/portfolio/blob/main/public/favicon-32x32.png" width="100" />
+  <img alt="Logo" src="https://github.com/aamnatayyab6/portfolio/blob/main/public/android-chrome-512x512.png" width="100" />
 </div>
 <h1 align="center">
   Aamna Tayyab
