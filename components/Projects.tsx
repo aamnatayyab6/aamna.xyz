@@ -54,7 +54,7 @@ function Projects({ projects }: Props) {
                     key={technology._id}
                     src={urlFor(technology?.image)?.url()}
                     alt="oops!"
-                    className=" rounded-full bg-davys-gray"
+                    className="h-12 w-12 rounded-full bg-davys-gray"
                     height={48}
                     width={48}
                   />
