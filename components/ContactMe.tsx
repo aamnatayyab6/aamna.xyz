@@ -24,28 +24,28 @@ const ContactMe = ({ pageInfo }: Props) => {
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-4">
-        <h4 className="text-2xl font-semibold text-timberwolf text-center -mt-20 md:mt-0">
+      <div className="flex flex-col space-y-4 pt-28 md:pt-0">
+        <h4 className="text-xl md:text-2xl font-semibold text-timberwolf text-center -mt-20 md:mt-0">
           Get In Touch.{" "}
           <span className="decoration-pale-dogwood/50 underline">
             Lets Talk.
           </span>
         </h4>
 
-        <div className="space-y-7">
+        <div className="md:space-y-7 space-y-0">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-pale-dogwood h-5 w-5 animate-pulse" />
-            <p className="text-lg text-timberwolf">{pageInfo.phoneNumber}</p>
+            <p className="text-base md:text-lg text-timberwolf">{pageInfo.phoneNumber}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-pale-dogwood h-5 w-5 animate-pulse" />
-            <p className="text-lg text-timberwolf">{pageInfo.email}</p>
+            <p className="text-base md:text-lg text-timberwolf">{pageInfo.email}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-pale-dogwood h-5 w-5 animate-pulse" />
-            <p className="text-lg text-timberwolf">{pageInfo.address}</p>
+            <p className="text-base md:text-lg text-timberwolf">{pageInfo.address}</p>
           </div>
         </div>
 

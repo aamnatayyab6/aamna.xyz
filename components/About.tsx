@@ -14,7 +14,7 @@ function About({ pageInfo }: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="flex flex-col relative  h-screen text-center 
-      md:text-left md:flex-row max-w-7xl px-10 justify-evenly
+      md:text-left md:flex-row max-w-7xl px-5 pt-12 md:pt-0 md:px-10 justify-evenly
       mx-auto items-center "
     >
       <h3
@@ -40,10 +40,10 @@ function About({ pageInfo }: Props) {
           once: true,
         }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className=" md:mb-0 flex-shrink-0 w-16 h-16 -mt-10 md:mt-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-80 xl:h-80"
+        className="md:z-0 -z-10 md:mb-0 flex-shrink-0 w-16 h-16 -mt-10 md:mt-0 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-80 xl:h-80"
       />
       <div className="space-y-5 px-0 md:px-10 -mt-32 md:mt-10">
-        <p className="text-xs md:text-base text-timberwolf">
+        <p className="text-xs md:text-base text-timberwolf md:mt-0 mt-12">
           Hello there! I&apos;m Aamna, a dynamic tech enthusiast hailing from
           Pakistan. Armed with a degree in Computer Science earned on a
           scholarship journey in Hungary, I&apos;ve evolved into a passionate

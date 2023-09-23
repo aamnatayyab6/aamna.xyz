@@ -37,7 +37,7 @@ function Projects({ projects }: Props) {
               className="h-44 w-46 md:h-64 md:w-66"
             />
 
-            <div className="space-y-5 px-0 md:px-10 max-w-4xl">
+            <div className="space-y-5 px-0 md:px-10 max-w-4xl pb-24 md:pb-4">
               <Link href={project?.linkToBuild}>
                 <h4 className="text-lg md:text-3xl font-semibold text-center text-timberwolf hover:text-rose-quartz">
                   <span className="underline decoration-pale-dogwood/50">
@@ -61,7 +61,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-base text-center md:text-left text-timberwolf">
+              <p className="text-sm text-center md:text-base md:text-left text-timberwolf">
                 {project?.summary}
               </p>
 

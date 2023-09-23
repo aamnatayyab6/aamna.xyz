@@ -13,11 +13,11 @@ function TechSkill({ directionLeft, techskill }: Props) {
         transition={{ duration: 0.8 }}
         whileInView={{ opacity: 1, x: 0 }}
         src={urlFor(techskill?.image).url()}
-        className="rounded-full border border-davys-gray object-cover w-16 h-16 md:w-20 md:h-20 filter group-hover:grayscale transition duration-300 ease-in-out bg-davys-gray"
+        className="rounded-full border border-transparent md:border-davys-gray object-cover w-16 h-16 md:w-20 md:h-20 filter group-hover:grayscale transition duration-300 ease-in-out md:bg-davys-gray bg-transparent "
       />
       <div className="absolute opacity-0 group-hover:opacity-90 transition duration-300 ease-in-out group-hover:bg-timberwolf w-16 h-16 md:w-20 md:h-20 rounded-full z-0">
         <div className="flex items-center justify-center h-full">
-          <p className="text-3xl font-bold text-black opacity-100">
+          <p className="text-2xl font-bold text-black opacity-100">
             {techskill?.progress}%{" "}
           </p>
         </div>
