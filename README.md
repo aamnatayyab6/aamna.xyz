@@ -8,7 +8,6 @@
 <p align="center">
   Personal portfolio website, built with <a href="https://nextjs.org/" target="_blank">Next.js</a> and hosted on <a href="https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme">Vercel</a>.
 </p>
-</p>
 
 <p align="center">
     <img src="https://therealsujitk-vercel-badge.vercel.app/?app=aamnatayyab" alt="status"/>
