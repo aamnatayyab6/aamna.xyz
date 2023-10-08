@@ -50,10 +50,10 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
         <p className="uppercase py-5 text-taupegray font-[Helvetica] text-start">
-          {new Date(experience?.dateStarted).toDateString()} -{" "}
+          {new Date(experience?.dateStarted).toDateString().split(" ")[3]} -{" "}
           {experience?.isCurrentlyWorkingHere
             ? "Present"
-            : new Date(experience?.dateEnded).toDateString()}
+            : new Date(experience?.dateEnded).toDateString().split(" ")[3]}
         </p>
 
         <ul className="list-disc text-start space-y-3 ml-3 md:ml-5 mr-0 md:mr-2 text-timberwolf font-[Helvetica]">
